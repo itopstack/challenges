@@ -1,3 +1,6 @@
 1. cd tamboon-server (localhost)
 2. go run *.go
-3. run tamboon.xcodeproj
+3. open another terminal tab
+4. cd tamboon
+5. carthage update --use-xcframeworks
+6. run tamboon.xcodeproj
