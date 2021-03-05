@@ -2,5 +2,5 @@
 2. go run *.go
 3. open another terminal tab
 4. cd tamboon
-5. carthage update --use-xcframeworks
+5. carthage update --use-xcframeworks (Xcode 12+, I am using Xcode 12.4)
 6. run tamboon.xcodeproj
