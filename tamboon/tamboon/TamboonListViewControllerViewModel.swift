@@ -75,8 +75,8 @@ final class TamboonListViewControllerViewModel: TamboonListViewControllerViewMod
     }
     
     func donate(from token: Token) {
-        guard let amount = Float(amountTxt ?? "0"), amount >= 20_000 else {
-            delegate?.didGetError(message: "The minimum to donate is 20,000 Satangs (Omise SDK test mode limitation)")
+        guard let amount = Float(amountTxt ?? "0"), amount >= 20 else {
+            delegate?.didGetError(message: "The minimum to donate is 20 Baht (Omise SDK test mode limitation)")
             return
         }
         guard let url = URL(string: "http://localhost:8080/donations") else { return }
@@ -85,7 +85,11 @@ final class TamboonListViewControllerViewModel: TamboonListViewControllerViewMod
         request.httpMethod = "POST"
         
         do {
-            let donation = Donation(name: token.card?.name ?? "", token: token.id, amount: amount)
+            let donation = Donation(
+                name: token.card?.name ?? "",
+                token: token.id,
+                amount: amount * 100 // convert Baht to Satang
+            )
             let body = try JSONEncoder().encode(donation)
             request.httpBody = body
             
