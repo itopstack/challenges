@@ -21,7 +21,18 @@
 		3AB9F29125F1EA0D00232E61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AB9F28F25F1EA0D00232E61 /* Main.storyboard */; };
 		3AB9F29325F1EA0E00232E61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AB9F29225F1EA0E00232E61 /* Assets.xcassets */; };
 		3AB9F29625F1EA0E00232E61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AB9F29425F1EA0E00232E61 /* LaunchScreen.storyboard */; };
+		3ACF15EB25F2327100379EFE /* tamboonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACF15EA25F2327100379EFE /* tamboonUITests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3ACF15ED25F2327100379EFE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3AB9F27E25F1EA0D00232E61 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3AB9F28525F1EA0D00232E61;
+			remoteInfo = tamboon;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		3A98E30B25F1F30600AE861F /* Embed Frameworks */ = {
@@ -53,6 +64,9 @@
 		3AB9F29225F1EA0E00232E61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3AB9F29525F1EA0E00232E61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3AB9F29725F1EA0E00232E61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3ACF15E825F2327100379EFE /* tamboonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tamboonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3ACF15EA25F2327100379EFE /* tamboonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tamboonUITests.swift; sourceTree = "<group>"; };
+		3ACF15EC25F2327100379EFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +76,13 @@
 			files = (
 				3A98E31325F2117000AE861F /* Nuke.xcframework in Frameworks */,
 				3A98E30925F1F30600AE861F /* OmiseSDK.xcframework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3ACF15E525F2327100379EFE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				3AB9F28825F1EA0D00232E61 /* tamboon */,
+				3ACF15E925F2327100379EFE /* tamboonUITests */,
 				3AB9F28725F1EA0D00232E61 /* Products */,
 				3A98E30725F1F30600AE861F /* Frameworks */,
 			);
@@ -109,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				3AB9F28625F1EA0D00232E61 /* tamboon.app */,
+				3ACF15E825F2327100379EFE /* tamboonUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -126,6 +149,15 @@
 				3AB9F29725F1EA0E00232E61 /* Info.plist */,
 			);
 			path = tamboon;
+			sourceTree = "<group>";
+		};
+		3ACF15E925F2327100379EFE /* tamboonUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3ACF15EA25F2327100379EFE /* tamboonUITests.swift */,
+				3ACF15EC25F2327100379EFE /* Info.plist */,
+			);
+			path = tamboonUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +181,24 @@
 			productReference = 3AB9F28625F1EA0D00232E61 /* tamboon.app */;
 			productType = "com.apple.product-type.application";
 		};
+		3ACF15E725F2327100379EFE /* tamboonUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3ACF15F125F2327100379EFE /* Build configuration list for PBXNativeTarget "tamboonUITests" */;
+			buildPhases = (
+				3ACF15E425F2327100379EFE /* Sources */,
+				3ACF15E525F2327100379EFE /* Frameworks */,
+				3ACF15E625F2327100379EFE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3ACF15EE25F2327100379EFE /* PBXTargetDependency */,
+			);
+			name = tamboonUITests;
+			productName = tamboonUITests;
+			productReference = 3ACF15E825F2327100379EFE /* tamboonUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -160,6 +210,10 @@
 				TargetAttributes = {
 					3AB9F28525F1EA0D00232E61 = {
 						CreatedOnToolsVersion = 12.3;
+					};
+					3ACF15E725F2327100379EFE = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = 3AB9F28525F1EA0D00232E61;
 					};
 				};
 			};
@@ -177,6 +231,7 @@
 			projectRoot = "";
 			targets = (
 				3AB9F28525F1EA0D00232E61 /* tamboon */,
+				3ACF15E725F2327100379EFE /* tamboonUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -189,6 +244,13 @@
 				3AB9F29625F1EA0E00232E61 /* LaunchScreen.storyboard in Resources */,
 				3AB9F29325F1EA0E00232E61 /* Assets.xcassets in Resources */,
 				3AB9F29125F1EA0D00232E61 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3ACF15E625F2327100379EFE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,7 +271,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3ACF15E425F2327100379EFE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3ACF15EB25F2327100379EFE /* tamboonUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3ACF15EE25F2327100379EFE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3AB9F28525F1EA0D00232E61 /* tamboon */;
+			targetProxy = 3ACF15ED25F2327100379EFE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3AB9F28F25F1EA0D00232E61 /* Main.storyboard */ = {
@@ -385,6 +463,42 @@
 			};
 			name = Release;
 		};
+		3ACF15EF25F2327100379EFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = tamboonUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.omise-challenge.tamboonUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = tamboon;
+			};
+			name = Debug;
+		};
+		3ACF15F025F2327100379EFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = tamboonUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.omise-challenge.tamboonUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = tamboon;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -402,6 +516,15 @@
 			buildConfigurations = (
 				3AB9F29B25F1EA0E00232E61 /* Debug */,
 				3AB9F29C25F1EA0E00232E61 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3ACF15F125F2327100379EFE /* Build configuration list for PBXNativeTarget "tamboonUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3ACF15EF25F2327100379EFE /* Debug */,
+				3ACF15F025F2327100379EFE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

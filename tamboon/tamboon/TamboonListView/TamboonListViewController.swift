@@ -91,7 +91,7 @@ extension TamboonListViewController: UITableViewDataSource, UITableViewDelegate 
         
         alert.addTextField { textField in
             textField.keyboardType = .decimalPad
-            textField.placeholder = "Amount in Baht"
+            textField.placeholder = "Amount in THB"
         }
         
         let cancelButton = UIAlertAction(title: "Cancel", style: .cancel) { [unowned self] _ in
