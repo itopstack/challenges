@@ -7,6 +7,7 @@
 
 import UIKit
 import Nuke
+import OmiseSDK
 
 final class TamboonListViewController: UIViewController {
     
@@ -47,9 +48,7 @@ extension TamboonListViewController: TamboonListViewControllerViewModelDelegate 
     }
     
     func didGetError(message: String) {
-        let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
-        let okButton = UIAlertAction(title: "OK", style: .default)
-        alert.addAction(okButton)
+        let alert = buildInformationAlertView(from: message)
         present(alert, animated: true)
     }
 }
@@ -72,5 +71,61 @@ extension TamboonListViewController: UITableViewDataSource, UITableViewDelegate 
         }
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let alert = UIAlertController(title: nil, message: "Please input amount you want to donate", preferredStyle: .alert)
+        
+        alert.addTextField { textField in
+            textField.keyboardType = .decimalPad
+            textField.placeholder = "Amount in Baht"
+        }
+        
+        let cancelButton = UIAlertAction(title: "Cancel", style: .cancel) { [unowned self] _ in
+            self.viewModel.amountTxt = nil
+        }
+        
+        let confirmButton = UIAlertAction(title: "Confirm", style: .default) { [unowned self] _ in
+            let textField = alert.textFields![0] as UITextField
+            self.viewModel.amountTxt = textField.text
+            
+            let creditCardView = CreditCardFormViewController.makeCreditCardFormViewController(withPublicKey: "pkey_test_5n2f9889lm32dhpumwe")
+            creditCardView.delegate = self
+            creditCardView.handleErrors = true
+            self.present(creditCardView, animated: true)
+        }
+        alert.addAction(cancelButton)
+        alert.addAction(confirmButton)
+        
+        present(alert, animated: true)
+    }
+}
+
+// MARK: - CreditCardFormViewControllerDelegate
+
+extension TamboonListViewController: CreditCardFormViewControllerDelegate {
+    
+    func creditCardFormViewController(_ controller: CreditCardFormViewController, didSucceedWithToken token: Token) {
+        
+    }
+    
+    func creditCardFormViewController(_ controller: CreditCardFormViewController, didFailWithError error: Error) {
+        viewModel.amountTxt = nil
+        let alert = buildInformationAlertView(from: error.localizedDescription)
+        present(alert, animated: true)
+    }
+    
+    func creditCardFormViewControllerDidCancel(_ controller: CreditCardFormViewController) {
+        viewModel.amountTxt = nil
+    }
+}
+
+private extension TamboonListViewController {
+    
+    func buildInformationAlertView(from message: String) -> UIAlertController {
+        let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+        let okButton = UIAlertAction(title: "OK", style: .default)
+        alert.addAction(okButton)
+        return alert
     }
 }

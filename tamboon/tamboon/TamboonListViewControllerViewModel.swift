@@ -13,6 +13,8 @@ protocol TamboonListViewControllerViewModelDelegate: AnyObject {
 }
 
 protocol TamboonListViewControllerViewModelInterface: AnyObject {
+    var amountTxt: String? { get set }
+    
     func fetchCharities()
     func numberOfRows(in section: Int) -> Int
     func charity(at indexPath: IndexPath) -> Charity
@@ -24,6 +26,8 @@ final class TamboonListViewControllerViewModel: TamboonListViewControllerViewMod
     private let session: URLSession
     
     private var charities: [Charity] = []
+    
+    var amountTxt: String? = nil
     
     init(delegate: TamboonListViewControllerViewModelDelegate,
          session: URLSession = URLSession.shared) {
