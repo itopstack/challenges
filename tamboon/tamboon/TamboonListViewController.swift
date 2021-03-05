@@ -47,7 +47,10 @@ extension TamboonListViewController: TamboonListViewControllerViewModelDelegate 
     }
     
     func didGetError(message: String) {
-        // TODO: Show error
+        let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+        let okButton = UIAlertAction(title: "OK", style: .default)
+        alert.addAction(okButton)
+        present(alert, animated: true)
     }
 }
 
