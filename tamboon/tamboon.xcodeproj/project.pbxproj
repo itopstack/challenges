@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A98E30925F1F30600AE861F /* OmiseSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A98E30825F1F30600AE861F /* OmiseSDK.xcframework */; };
+		3A98E30A25F1F30600AE861F /* OmiseSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3A98E30825F1F30600AE861F /* OmiseSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3AB9F28A25F1EA0D00232E61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB9F28925F1EA0D00232E61 /* AppDelegate.swift */; };
 		3AB9F28C25F1EA0D00232E61 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB9F28B25F1EA0D00232E61 /* SceneDelegate.swift */; };
 		3AB9F28E25F1EA0D00232E61 /* TamboonListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB9F28D25F1EA0D00232E61 /* TamboonListViewController.swift */; };
@@ -15,7 +17,22 @@
 		3AB9F29625F1EA0E00232E61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AB9F29425F1EA0E00232E61 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		3A98E30B25F1F30600AE861F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3A98E30A25F1F30600AE861F /* OmiseSDK.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		3A98E30825F1F30600AE861F /* OmiseSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = OmiseSDK.xcframework; path = Carthage/Build/OmiseSDK.xcframework; sourceTree = "<group>"; };
 		3AB9F28625F1EA0D00232E61 /* tamboon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tamboon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AB9F28925F1EA0D00232E61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AB9F28B25F1EA0D00232E61 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +48,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A98E30925F1F30600AE861F /* OmiseSDK.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A98E30725F1F30600AE861F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3A98E30825F1F30600AE861F /* OmiseSDK.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3AB9F27D25F1EA0D00232E61 = {
 			isa = PBXGroup;
 			children = (
 				3AB9F28825F1EA0D00232E61 /* tamboon */,
 				3AB9F28725F1EA0D00232E61 /* Products */,
+				3A98E30725F1F30600AE861F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,6 +104,7 @@
 				3AB9F28225F1EA0D00232E61 /* Sources */,
 				3AB9F28325F1EA0D00232E61 /* Frameworks */,
 				3AB9F28425F1EA0D00232E61 /* Resources */,
+				3A98E30B25F1F30600AE861F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
