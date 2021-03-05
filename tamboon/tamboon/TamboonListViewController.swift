@@ -43,6 +43,19 @@ final class TamboonListViewController: UIViewController {
 
 extension TamboonListViewController: TamboonListViewControllerViewModelDelegate {
     
+    func didFinishDonate(result: Bool) {
+        let message: String
+        if result {
+            message = "Donate success"
+        } else {
+            message = "Donate fail, please try again"
+        }
+        
+        let alert = buildInformationAlertView(from: message)
+        present(alert, animated: true)
+        viewModel.amountTxt = nil
+    }
+    
     func didGetCharities() {
         tableView.reloadData()
     }
@@ -106,10 +119,12 @@ extension TamboonListViewController: UITableViewDataSource, UITableViewDelegate 
 extension TamboonListViewController: CreditCardFormViewControllerDelegate {
     
     func creditCardFormViewController(_ controller: CreditCardFormViewController, didSucceedWithToken token: Token) {
-        
+        dismiss(animated: true)
+        viewModel.donate(from: token)
     }
     
     func creditCardFormViewController(_ controller: CreditCardFormViewController, didFailWithError error: Error) {
+        dismiss(animated: true)
         viewModel.amountTxt = nil
         let alert = buildInformationAlertView(from: error.localizedDescription)
         present(alert, animated: true)
