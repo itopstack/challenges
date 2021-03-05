@@ -14,6 +14,8 @@ protocol TamboonListViewControllerViewModelDelegate: AnyObject {
 
 protocol TamboonListViewControllerViewModelInterface: AnyObject {
     func fetchCharities()
+    func numberOfRows(in section: Int) -> Int
+    func charity(at indexPath: IndexPath) -> Charity
 }
 
 final class TamboonListViewControllerViewModel: TamboonListViewControllerViewModelInterface {
@@ -63,5 +65,13 @@ final class TamboonListViewControllerViewModel: TamboonListViewControllerViewMod
             }
             
         }.resume()
+    }
+    
+    func numberOfRows(in section: Int) -> Int {
+        charities.count
+    }
+    
+    func charity(at indexPath: IndexPath) -> Charity {
+        charities[indexPath.row]
     }
 }

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Nuke
 
 final class TamboonListViewController: UIViewController {
     
@@ -25,6 +26,7 @@ final class TamboonListViewController: UIViewController {
         view.addSubview(tableView)
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         
         let safeArea = view.safeAreaLayoutGuide
         tableView.topAnchor.constraint(equalTo: safeArea.topAnchor).isActive = true
@@ -54,10 +56,18 @@ extension TamboonListViewController: TamboonListViewControllerViewModelDelegate 
 extension TamboonListViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        0
+        viewModel.numberOfRows(in: section)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let charity = viewModel.charity(at: indexPath)
+        cell.textLabel?.text = charity.name
+        
+        if let imageView = cell.imageView {
+            Nuke.loadImage(with: charity.logoURL, into: imageView)
+        }
+        
+        return cell
     }
 }
