@@ -8,8 +8,18 @@
 import UIKit
 
 final class TamboonListViewController: UIViewController {
-
+    
+    private var viewModel: TamboonListViewControllerViewModelInterface!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        viewModel = TamboonListViewControllerViewModel(delegate: self)
     }
+}
+
+// MARK: - TamboonListViewControllerViewModelDelegate
+
+extension TamboonListViewController: TamboonListViewControllerViewModelDelegate {
+    
 }

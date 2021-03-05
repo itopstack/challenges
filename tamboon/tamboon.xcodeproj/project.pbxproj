@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3A98E30925F1F30600AE861F /* OmiseSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A98E30825F1F30600AE861F /* OmiseSDK.xcframework */; };
 		3A98E30A25F1F30600AE861F /* OmiseSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3A98E30825F1F30600AE861F /* OmiseSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3A98E30D25F1F8B000AE861F /* TamboonListViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A98E30C25F1F8B000AE861F /* TamboonListViewControllerViewModel.swift */; };
 		3AB9F28A25F1EA0D00232E61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB9F28925F1EA0D00232E61 /* AppDelegate.swift */; };
 		3AB9F28C25F1EA0D00232E61 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB9F28B25F1EA0D00232E61 /* SceneDelegate.swift */; };
 		3AB9F28E25F1EA0D00232E61 /* TamboonListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB9F28D25F1EA0D00232E61 /* TamboonListViewController.swift */; };
@@ -33,6 +34,7 @@
 
 /* Begin PBXFileReference section */
 		3A98E30825F1F30600AE861F /* OmiseSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = OmiseSDK.xcframework; path = Carthage/Build/OmiseSDK.xcframework; sourceTree = "<group>"; };
+		3A98E30C25F1F8B000AE861F /* TamboonListViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamboonListViewControllerViewModel.swift; sourceTree = "<group>"; };
 		3AB9F28625F1EA0D00232E61 /* tamboon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tamboon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AB9F28925F1EA0D00232E61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AB9F28B25F1EA0D00232E61 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				3AB9F28925F1EA0D00232E61 /* AppDelegate.swift */,
 				3AB9F28B25F1EA0D00232E61 /* SceneDelegate.swift */,
 				3AB9F28D25F1EA0D00232E61 /* TamboonListViewController.swift */,
+				3A98E30C25F1F8B000AE861F /* TamboonListViewControllerViewModel.swift */,
 				3AB9F28F25F1EA0D00232E61 /* Main.storyboard */,
 				3AB9F29225F1EA0E00232E61 /* Assets.xcassets */,
 				3AB9F29425F1EA0E00232E61 /* LaunchScreen.storyboard */,
@@ -167,6 +170,7 @@
 			files = (
 				3AB9F28E25F1EA0D00232E61 /* TamboonListViewController.swift in Sources */,
 				3AB9F28A25F1EA0D00232E61 /* AppDelegate.swift in Sources */,
+				3A98E30D25F1F8B000AE861F /* TamboonListViewControllerViewModel.swift in Sources */,
 				3AB9F28C25F1EA0D00232E61 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
