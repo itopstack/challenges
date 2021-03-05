@@ -77,6 +77,25 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		3A98E31925F2318400AE861F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3A98E30E25F200FC00AE861F /* Charity.swift */,
+				3A98E31525F223E600AE861F /* Donation.swift */,
+				3A98E31725F226A000AE861F /* DonationResult.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3A98E31A25F231AE00AE861F /* TamboonListView */ = {
+			isa = PBXGroup;
+			children = (
+				3AB9F28D25F1EA0D00232E61 /* TamboonListViewController.swift */,
+				3A98E30C25F1F8B000AE861F /* TamboonListViewControllerViewModel.swift */,
+			);
+			path = TamboonListView;
+			sourceTree = "<group>";
+		};
 		3AB9F27D25F1EA0D00232E61 = {
 			isa = PBXGroup;
 			children = (
@@ -97,13 +116,10 @@
 		3AB9F28825F1EA0D00232E61 /* tamboon */ = {
 			isa = PBXGroup;
 			children = (
+				3A98E31A25F231AE00AE861F /* TamboonListView */,
+				3A98E31925F2318400AE861F /* Models */,
 				3AB9F28925F1EA0D00232E61 /* AppDelegate.swift */,
 				3AB9F28B25F1EA0D00232E61 /* SceneDelegate.swift */,
-				3AB9F28D25F1EA0D00232E61 /* TamboonListViewController.swift */,
-				3A98E30C25F1F8B000AE861F /* TamboonListViewControllerViewModel.swift */,
-				3A98E30E25F200FC00AE861F /* Charity.swift */,
-				3A98E31525F223E600AE861F /* Donation.swift */,
-				3A98E31725F226A000AE861F /* DonationResult.swift */,
 				3AB9F28F25F1EA0D00232E61 /* Main.storyboard */,
 				3AB9F29225F1EA0E00232E61 /* Assets.xcassets */,
 				3AB9F29425F1EA0E00232E61 /* LaunchScreen.storyboard */,
