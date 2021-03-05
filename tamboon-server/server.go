@@ -25,7 +25,6 @@ func (handler *TamboonHandler) ServeHTTP(resp http.ResponseWriter, req *http.Req
 
 	} else {
 		http.NotFound(resp, req)
-
 	}
 }
 
@@ -51,6 +50,7 @@ func (handler *TamboonHandler) POST(resp http.ResponseWriter, req *http.Request)
 		Currency:    "THB",
 		Description: donation.Name,
 	}
+
 	if e := handler.client.Do(charge, operation); e != nil {
 		http.Error(resp, e.Error(), 400)
 		return
