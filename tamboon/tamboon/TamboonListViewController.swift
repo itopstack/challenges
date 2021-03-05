@@ -31,6 +31,8 @@ final class TamboonListViewController: UIViewController {
         tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         tableView.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor).isActive = true
         tableView.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor).isActive = true
+        
+        viewModel.fetchCharities()
     }
 }
 
@@ -38,6 +40,13 @@ final class TamboonListViewController: UIViewController {
 
 extension TamboonListViewController: TamboonListViewControllerViewModelDelegate {
     
+    func didGetCharities() {
+        tableView.reloadData()
+    }
+    
+    func didGetError(message: String) {
+        // TODO: Show error
+    }
 }
 
 // MARK: - UITableViewDataSource, UITableViewDelegate
