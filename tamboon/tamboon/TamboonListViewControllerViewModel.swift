@@ -75,7 +75,10 @@ final class TamboonListViewControllerViewModel: TamboonListViewControllerViewMod
     }
     
     func donate(from token: Token) {
-        guard let amount = Float(amountTxt ?? "0") else { return }
+        guard let amount = Float(amountTxt ?? "0"), amount >= 20_000 else {
+            delegate?.didGetError(message: "The minimum to donate is 20,000 Satangs (Omise SDK test mode limitation)")
+            return
+        }
         guard let url = URL(string: "http://localhost:8080/donations") else { return }
         
         var request = URLRequest(url: url)
