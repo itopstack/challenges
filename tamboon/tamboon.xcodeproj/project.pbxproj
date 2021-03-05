@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		3AB9F28A25F1EA0D00232E61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB9F28925F1EA0D00232E61 /* AppDelegate.swift */; };
 		3AB9F28C25F1EA0D00232E61 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB9F28B25F1EA0D00232E61 /* SceneDelegate.swift */; };
-		3AB9F28E25F1EA0D00232E61 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB9F28D25F1EA0D00232E61 /* ViewController.swift */; };
+		3AB9F28E25F1EA0D00232E61 /* TamboonListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB9F28D25F1EA0D00232E61 /* TamboonListViewController.swift */; };
 		3AB9F29125F1EA0D00232E61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AB9F28F25F1EA0D00232E61 /* Main.storyboard */; };
 		3AB9F29325F1EA0E00232E61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AB9F29225F1EA0E00232E61 /* Assets.xcassets */; };
 		3AB9F29625F1EA0E00232E61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AB9F29425F1EA0E00232E61 /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 		3AB9F28625F1EA0D00232E61 /* tamboon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tamboon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AB9F28925F1EA0D00232E61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AB9F28B25F1EA0D00232E61 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3AB9F28D25F1EA0D00232E61 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3AB9F28D25F1EA0D00232E61 /* TamboonListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamboonListViewController.swift; sourceTree = "<group>"; };
 		3AB9F29025F1EA0D00232E61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3AB9F29225F1EA0E00232E61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3AB9F29525F1EA0E00232E61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,7 +58,7 @@
 			children = (
 				3AB9F28925F1EA0D00232E61 /* AppDelegate.swift */,
 				3AB9F28B25F1EA0D00232E61 /* SceneDelegate.swift */,
-				3AB9F28D25F1EA0D00232E61 /* ViewController.swift */,
+				3AB9F28D25F1EA0D00232E61 /* TamboonListViewController.swift */,
 				3AB9F28F25F1EA0D00232E61 /* Main.storyboard */,
 				3AB9F29225F1EA0E00232E61 /* Assets.xcassets */,
 				3AB9F29425F1EA0E00232E61 /* LaunchScreen.storyboard */,
@@ -137,7 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3AB9F28E25F1EA0D00232E61 /* ViewController.swift in Sources */,
+				3AB9F28E25F1EA0D00232E61 /* TamboonListViewController.swift in Sources */,
 				3AB9F28A25F1EA0D00232E61 /* AppDelegate.swift in Sources */,
 				3AB9F28C25F1EA0D00232E61 /* SceneDelegate.swift in Sources */,
 			);
@@ -288,6 +288,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = tamboon/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,6 +307,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = tamboon/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
