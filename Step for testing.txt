@@ -1,0 +1,3 @@
+1. cd tamboon-server (localhost)
+2. go run *.go
+3. run tamboon.xcodeproj
