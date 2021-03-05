@@ -11,6 +11,8 @@
 		3A98E30A25F1F30600AE861F /* OmiseSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3A98E30825F1F30600AE861F /* OmiseSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3A98E30D25F1F8B000AE861F /* TamboonListViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A98E30C25F1F8B000AE861F /* TamboonListViewControllerViewModel.swift */; };
 		3A98E30F25F200FC00AE861F /* Charity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A98E30E25F200FC00AE861F /* Charity.swift */; };
+		3A98E31325F2117000AE861F /* Nuke.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A98E31225F2117000AE861F /* Nuke.xcframework */; };
+		3A98E31425F2117000AE861F /* Nuke.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3A98E31225F2117000AE861F /* Nuke.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3AB9F28A25F1EA0D00232E61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB9F28925F1EA0D00232E61 /* AppDelegate.swift */; };
 		3AB9F28C25F1EA0D00232E61 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB9F28B25F1EA0D00232E61 /* SceneDelegate.swift */; };
 		3AB9F28E25F1EA0D00232E61 /* TamboonListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB9F28D25F1EA0D00232E61 /* TamboonListViewController.swift */; };
@@ -26,6 +28,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				3A98E31425F2117000AE861F /* Nuke.xcframework in Embed Frameworks */,
 				3A98E30A25F1F30600AE861F /* OmiseSDK.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -37,6 +40,7 @@
 		3A98E30825F1F30600AE861F /* OmiseSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = OmiseSDK.xcframework; path = Carthage/Build/OmiseSDK.xcframework; sourceTree = "<group>"; };
 		3A98E30C25F1F8B000AE861F /* TamboonListViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamboonListViewControllerViewModel.swift; sourceTree = "<group>"; };
 		3A98E30E25F200FC00AE861F /* Charity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Charity.swift; sourceTree = "<group>"; };
+		3A98E31225F2117000AE861F /* Nuke.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Nuke.xcframework; path = Carthage/Build/Nuke.xcframework; sourceTree = "<group>"; };
 		3AB9F28625F1EA0D00232E61 /* tamboon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tamboon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AB9F28925F1EA0D00232E61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AB9F28B25F1EA0D00232E61 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A98E31325F2117000AE861F /* Nuke.xcframework in Frameworks */,
 				3A98E30925F1F30600AE861F /* OmiseSDK.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -62,6 +67,7 @@
 		3A98E30725F1F30600AE861F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3A98E31225F2117000AE861F /* Nuke.xcframework */,
 				3A98E30825F1F30600AE861F /* OmiseSDK.xcframework */,
 			);
 			name = Frameworks;

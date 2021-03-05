@@ -1,1 +1,2 @@
 github "omise/omise-ios" ~> 4.1.0
+github "kean/Nuke" ~> 9.0
