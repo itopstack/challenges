@@ -1,6 +1,8 @@
 1. cd tamboon-server (localhost)
-2. go run *.go
-3. open another terminal tab
-4. cd tamboon
-5. carthage update --use-xcframeworks (Xcode 12+, I am using Xcode 12.4)
-6. run tamboon.xcodeproj
+2. export OMISE_SKEY=skey_your_omise_key
+3. go run *.go
+4. open another terminal tab
+5. cd tamboon
+6. carthage update --use-xcframeworks (Xcode 12+, I am using Xcode 12.4)
+7. run tamboon.xcodeproj
+8. run tamboon UITest
